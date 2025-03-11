@@ -4,4 +4,5 @@ version = "0.1.0"
 entrypoint = "statementsp.typ"
 authors = ["Riley"]
 license = "MIT"
+repository = "https://github.com/Riley719/typst-statementsp"
 description = "Happy statementbox and its cross refference system."
