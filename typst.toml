@@ -1,0 +1,7 @@
+[package]
+name = "statementsp"
+version = "0.1.0"
+entrypoint = "statementsp.typ"
+authors = ["Riley"]
+license = "MIT"
+description = "Happy statementbox and its cross refference system."
