@@ -50,5 +50,6 @@ Then, you can see the hyperlink desplayed like "Def 1.1". Of course, you can use
 ```
 
 ## Remark
+I use showybox package mainly.
 You can not attach labels to a box without number.
 I am a begginer of typst and English. So this document may be a bit confusing. 
