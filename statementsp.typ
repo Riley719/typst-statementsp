@@ -3,7 +3,12 @@
 #let statementnum = counter("statementnum")
 #let statement = state("statementsplist", ("@@@defaultkey@@@": ("default", "default", "default")))
 
-#let newstatementsp(box-name, box-display, title-color, box-color) = {
+#let newstatementsp(
+  box-name: none,
+  box-display: none,
+  title-color: none,
+  box-color: none,
+  ) = {
   context {
     statement.update(statementsplist => {
       statementsplist.insert(box-name, (box-display, title-color, box-color))
@@ -23,13 +28,13 @@
     context statementnum.step()
   }
   #context {
-    if box-label != none and not number {
-      panic("Error: This is statementsp. If you want to use label, you should set number to true.")
+    if box-label != "" and box-label != none and not number {
+      assert(false, message: "Error: This is statementsp. If you want to use label, you should set number to true.")
     }
     let box-title-display = ""
     if box-title != none {
       if box-title != "" {
-        box-title-display = " :(" + box-title + ")"
+        box-title-display = ": " + box-title
       }
     }
     if number {
